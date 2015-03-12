@@ -1,6 +1,7 @@
 # Karma configuration
 karmaFiles = [
 
+  'test/**/*.coffee'
   'src/**/*.coffee'
   'src/**/*.spec.coffee'
 ]
