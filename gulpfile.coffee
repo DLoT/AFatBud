@@ -16,7 +16,7 @@ gulp.task "scripts", ->
   gulp.src(sources, read: false )
   .pipe coffeeify()
   .pipe browserify()
-  .pipe rename("afatbud.js")
+  .pipe rename("AFatBud.js")
   .pipe gulp.dest("./build")
   return
 
