@@ -1,7 +1,11 @@
 {
-  "name": "AFatBud",
-  "version": "0.0.0",
-  "main": "AFatBud.js",
+  "name": "afatbud",
+  "version": "0.0.1",
+  "main": "build/AFatBud.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DLoT/AFatBud.git"
+  },
 
   "dependencies": {
   },
