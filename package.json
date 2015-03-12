@@ -1,0 +1,33 @@
+{
+  "name": "AFatBud",
+  "version": "0.0.0",
+  "main": "AFatBud.js",
+
+  "dependencies": {
+  },
+
+  "devDependencies": {
+    "express": "*",
+    "tiny-lr": "*",
+    "connect-livereload": "*",
+
+    "gulp": "*",
+    "gulp-util": "*",
+    "gulp-concat": "*",
+    "gulp-load-plugins": "*",
+    "gulp-angular-templatecache": "*",
+    "gulp-connect": "*",
+    "gulp-coffeelint": "*",
+    "gulp-compile-js": "*",
+    "gulp-karma": "*",
+
+    "coffee-script": "*",
+    "chalk": "*",
+
+    "karma": "*",
+    "karma-chrome-launcher": "*",
+    "karma-jasmine": "*",
+    "karma-coffee-preprocessor": "*",
+    "karma-phantomjs-launcher": "*"
+  }
+}
