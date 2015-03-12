@@ -1,9 +1,9 @@
 # Karma configuration
 karmaFiles = [
 
-  'test/**/*.coffee'
   'src/**/*.coffee'
   'src/**/*.spec.coffee'
+  'test/**/*.coffee'
 ]
 
 
@@ -21,6 +21,7 @@ module.exports = (config) ->
 
     preprocessors:
       'src/**/*.coffee': ['coffee']
+      'test/**/*.coffee': ['coffee']
 
   # web server port
     port: 9876
