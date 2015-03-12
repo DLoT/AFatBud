@@ -1,12 +1,3 @@
-# Karma configuration
-karmaFiles = [
-
-  'src/**/*.coffee'
-  'src/**/*.spec.coffee'
-  'test/**/*.coffee'
-]
-
-
 module.exports = (config) ->
 
   config.set
@@ -14,14 +5,23 @@ module.exports = (config) ->
     basePath: ''
 
   # list of files / patterns to load in the browser
-    files: karmaFiles
-
+    files: [
+      'build/bundle.js'
+      'src/**/*.spec.coffee'
+      'test/**/*.coffee'
+    ]
   # list of files to exclude
     exclude: []
 
     preprocessors:
-      'src/**/*.coffee': ['coffee']
-      'test/**/*.coffee': ['coffee']
+      'src/**/*.spec.coffee': ['browserify']
+      'test/customMatchers.coffee': ['coffee']
+      'test/FactoryMembersMock.coffee': ['browserify']
+
+    browserify:
+      debug: true
+      transform: [ 'coffeeify']
+      extensions: ['.coffee']
 
   # web server port
     port: 9876
@@ -45,13 +45,15 @@ module.exports = (config) ->
   # - PhantomJS
     browsers: ['PhantomJS']
 
+
   # Continuous Integration mode
   # if true, it capture browsers, run tests and exit
     singleRun: no
 
-    frameworks: ['jasmine']
+    frameworks: ['browserify', 'jasmine']
 
     plugins: [
+      'karma-browserify',
       'karma-jasmine'
       'karma-phantomjs-launcher'
       'karma-coffee-preprocessor'

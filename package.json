@@ -6,15 +6,15 @@
     "type": "git",
     "url": "https://github.com/DLoT/AFatBud.git"
   },
+  "scripts": {
+    "test": "gulp karma-unit",
+    "develop": "gulp"
+  },
 
   "dependencies": {
   },
 
   "devDependencies": {
-    "express": "*",
-    "tiny-lr": "*",
-    "connect-livereload": "*",
-
     "gulp": "*",
     "gulp-util": "*",
     "gulp-concat": "*",
@@ -30,12 +30,14 @@
 
     "browserify": "*",
     "coffee-script": "*",
+    "coffeeify": "*",
     "chalk": "*",
 
     "karma": "*",
     "karma-chrome-launcher": "*",
     "karma-jasmine": "*",
-    "karma-coffee-preprocessor": "*",
-    "karma-phantomjs-launcher": "*"
+    "karma-browserify": "*",
+    "karma-phantomjs-launcher": "*",
+    "karma-coffee-preprocessor": "*"
   }
 }

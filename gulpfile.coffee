@@ -2,21 +2,22 @@ gulp        = require "gulp"
 gutil       = require "gulp-util"
 plugins     = require("gulp-load-plugins")(lazy: false)
 coffeeify   = require 'gulp-coffeeify'
-browserify  = require 'gulp-browserify'
 rename      = require 'gulp-rename'
 karma       = require 'gulp-karma'
 chalk       = require "chalk"
 path        = require "path"
 
+
 gulp.task "scripts", ->
   sources =[
     "!./src/**/*.spec.coffee"
-    "./src/**/*.coffee"
+    "./src/**/bundle.coffee"
   ]
   gulp.src(sources, read: false )
-  .pipe coffeeify()
-  .pipe browserify()
-  .pipe rename("AFatBud.js")
+  .pipe coffeeify(
+    options:
+      paths: [__dirname + '/src']
+  )
   .pipe gulp.dest("./build")
   return
 

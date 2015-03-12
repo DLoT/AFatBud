@@ -10,5 +10,4 @@ class AFatBud
   isFactory: (key) ->
     /^[A-Z]/.test key
 
-
-
+module.exports = AFatBud

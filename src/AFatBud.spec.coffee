@@ -1,9 +1,9 @@
-factories = null
-require = null
+AFatBud = require "./AFatBud"
 
 describe 'AFatBud', ->
 
   class AbstractFactoryMock
+
 
   config =
     AFactory: ->
