@@ -2,6 +2,7 @@ customMatchers =
   toBeInstanceOf: ->
     compare: (actual, expected) ->
       expected  = '' unless expected
+      return result = message: "Expection is undefined on custom Matcher toBeInstanceOf" unless actual
       result =
         pass: actual instanceof expected
         message: "Expected: #{actual.constructor.name} is instanceof #{expected.name}"
