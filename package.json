@@ -20,7 +20,11 @@
     "gulp-coffeelint": "*",
     "gulp-compile-js": "*",
     "gulp-karma": "*",
+    "gulp-browserify": "*",
+    "gulp-coffeeify": "*",
+    "gulp-rename": "*",
 
+    "browserify": "*",
     "coffee-script": "*",
     "chalk": "*",
 
